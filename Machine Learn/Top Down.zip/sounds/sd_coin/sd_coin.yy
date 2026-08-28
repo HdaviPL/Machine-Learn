@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sd_coin",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.3628125,
+  "exportDir":"",
+  "name":"sd_coin",
+  "parent":{
+    "name":"Sound_Effects",
+    "path":"folders/Sounds/Sound_Effects.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":48000,
+  "soundFile":"sd_coin.wav",
+  "volume":0.7,
+}

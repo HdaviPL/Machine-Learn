@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sd_music_andar_02",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":57.542458,
+  "exportDir":"",
+  "name":"sd_music_andar_02",
+  "parent":{
+    "name":"Andares",
+    "path":"folders/Sounds/Andares.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":48000,
+  "soundFile":"sd_music_andar_02.wav",
+  "volume":1.0,
+}

@@ -1,0 +1,1 @@
+timer_restart = timer_restart_max;
