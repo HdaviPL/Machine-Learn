@@ -10,8 +10,7 @@ if (prox_room == true) and (troca_cooldown <= 0){
 			if sala_atual != (salas_max-1){
 				sala_atual +=1;				
 			} else{
-				obj_music.tipo_music = "boss";
-				room_goto(boss);
+				room_goto(loja);
 				exit;
 			}
 		break;		
@@ -37,6 +36,7 @@ if (prox_room == true) and (troca_cooldown <= 0){
 			obj_player.y = y + _align;
 		}
 	}
+	
 	prox_room = false;
 }
 	sala_bloqueada = false;	

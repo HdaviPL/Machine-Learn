@@ -4,7 +4,6 @@ function room_gerar(){
 		up:		-1,
 		down:	-1
 	}
-
 	salas_atuais+=1;	
 }
 
@@ -66,140 +65,249 @@ function room_mostrar(){
 			var _pos_y = (_y * 16)+64;
 			var _pos_x = (_x * 16)+16;
 		
-		
-			//desenhar o espinho na posição e se a cor for vermelho		
-			if (_r == 255) and (_g == 0) and (_b == 0) and (_a == 255){
-				instance_create_layer(_pos_x,_pos_y,"Spikes",obj_spike);	
-			}
+			#region criar room	
+				//desenhar o espinho na posição e se a cor for vermelho		
+				if (_r == 255) and (_g == 0) and (_b == 0) and (_a == 255){
+					instance_create_layer(_pos_x,_pos_y,"Spikes",obj_spike);	
+				}
 			   
-			//desenhar um obstáculo na posição e se a cor for roxo
-			if (_r == 128) and (_g == 0) and (_b == 255) and (_a == 255){
-				instance_create_layer(_pos_x,_pos_y,"Obs",obj_obs);	
-			}
-				
-			//desenhar um buraco na posição e se a cor for preto
-			if (_r == 0) and (_g == 0) and (_b == 0) and (_a == 255){
-				var _hole = instance_create_layer(_pos_x,_pos_y,"Holes",obj_hole);;	
-				_hole.borda = true;
-				if _y > 0{
-					var _pixel_cima = buffer_peek(buffer_room, 4 * (_x + (_y - 1) * _w),buffer_u32);
-					var _r_cima = (_pixel_cima & $ff),
-						_g_cima = (_pixel_cima >> 8) & $ff,
-						_b_cima = (_pixel_cima >> 16) & $ff,
-						_a_cima = (_pixel_cima >> 24) & $ff;
-					if (_r_cima == 0) and (_g_cima == 0) and (_b_cima == 0) and (_a_cima == 255){
-						_hole.borda = false;
-					} else{
-						_hole.borda = true;
-					}	
+				//desenhar um obstáculo 1 na posição e se a cor for roxo
+				if (_r == 128) and (_g == 0) and (_b == 255) and (_a == 255){
+					instance_create_layer(_pos_x,_pos_y,"Obs",obj_obs);	
 				}
-				
-				if _y < _h - 1{
-					var _pixel_baixo = buffer_peek(buffer_room, 4 * (_x + (_y + 1) * _w),buffer_u32);
-					#region borda baixo
-					var _r_baixo = (_pixel_baixo & $ff),
-						_g_baixo = (_pixel_baixo >> 8) & $ff,
-						_b_baixo = (_pixel_baixo >> 16) & $ff,
-						_a_baixo = (_pixel_baixo >> 24) & $ff;
-					if (_r_baixo == 0) and (_g_baixo == 0) and (_b_baixo == 0) and (_a_baixo == 255){
-						_hole.borda_down = false;
-					} else{
-						_hole.borda_down = true;
-					}
-					#endregion	
-				}
-			}
-				
-			//desenhar água na posição e se a cor for azul
-			if (_r == 0) and (_g == 128) and (_b == 255) and (_a == 255){
-				var _agua = instance_create_layer(_pos_x,_pos_y,"Holes",obj_water);	
-				    _agua.borda = false;
-				    _agua.borda_down = false;
-				if _y > 0{
-					var _pixel_cima = buffer_peek(buffer_room, 4 * (_x + (_y - 1) * _w),buffer_u32);
-					#region borda cima
-					var _r_cima = (_pixel_cima & $ff),
-						_g_cima = (_pixel_cima >> 8) & $ff,
-						_b_cima = (_pixel_cima >> 16) & $ff,
-						_a_cima = (_pixel_cima >> 24) & $ff;
-					if (_r_cima == 0) and (_g_cima == 128) and (_b_cima == 255) and (_a_cima == 255){
-						_agua.borda = false;
-					} else{
-						_agua.borda = true;
-					}
-					#endregion
-				}
-				
-				if _y < _h - 1{
-					var _pixel_baixo = buffer_peek(buffer_room, 4 * (_x + (_y + 1) * _w),buffer_u32);
-					#region borda baixo
-					var _r_baixo = (_pixel_baixo & $ff),
-						_g_baixo = (_pixel_baixo >> 8) & $ff,
-						_b_baixo = (_pixel_baixo >> 16) & $ff,
-						_a_baixo = (_pixel_baixo >> 24) & $ff;
-					if (_r_baixo == 0) and (_g_baixo == 128) and (_b_baixo == 255) and (_a_baixo == 255){
-						_agua.borda_down = false;
-					} else{
-						_agua.borda_down = true;
-					}
-					#endregion	
-				}
-			}
-				
-			//desenhar um médico na posição e se a cor for laranja
-			if (_r == 255) and (_g == 128) and (_b == 0) and (_a == 255) and (obj_game.salas_limpas[sala_atual] == false){
-				var _medic = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_medic);	
-				_medic.sala_id = sala_atual;
-				_medic.inimigo_id = inimigo_count;
-				inimigo_count+=1;			
-			}
 			
-			//desenhar uma aranha na posição e se a cor for amarelo
-			if (_r == 255) and (_g == 255) and (_b == 0) and (_a == 255) and (obj_game.salas_limpas[sala_atual] == false){
-				var _arac = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_aranha);	
-				_arac.sala_id = sala_atual;
-				_arac.inimigo_id = inimigo_count;
-				inimigo_count+=1;			
-			}
+				//desenhar um obstáculo 2 na posição e se a cor for branco
+				if (_r == 255) and (_g == 255) and (_b == 255) and (_a == 255){
+					instance_create_layer(_pos_x,_pos_y,"Obs",obj_obs_2);	
+				}
 			
-			//desenhar um masked na posição e se a cor for verde
-			if (_r == 0) and (_g == 255) and (_b == 0) and (_a == 255) and (obj_game.salas_limpas[sala_atual] == false){
-				var _masked = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_masked);	
-				_masked.sala_id = sala_atual;
-				_masked.inimigo_id = inimigo_count;
-				inimigo_count+=1;			
-			}
+				//desenhar um buraco na posição e se a cor for preto
+				if (_r == 0) and (_g == 0) and (_b == 0) and (_a == 255){
+					var _hole = instance_create_layer(_pos_x,_pos_y,"Holes",obj_hole);;	
+					_hole.borda = true;
+					if _y > 0{
+						var _pixel_cima = buffer_peek(buffer_room, 4 * (_x + (_y - 1) * _w),buffer_u32);
+						var _r_cima = (_pixel_cima & $ff),
+							_g_cima = (_pixel_cima >> 8) & $ff,
+							_b_cima = (_pixel_cima >> 16) & $ff,
+							_a_cima = (_pixel_cima >> 24) & $ff;
+						if (_r_cima == 0) and (_g_cima == 0) and (_b_cima == 0) and (_a_cima == 255){
+							_hole.borda = false;
+						} else{
+							_hole.borda = true;
+						}	
+					}
+				
+					if _y < _h - 1{
+						var _pixel_baixo = buffer_peek(buffer_room, 4 * (_x + (_y + 1) * _w),buffer_u32);
+						#region borda baixo
+						var _r_baixo = (_pixel_baixo & $ff),
+							_g_baixo = (_pixel_baixo >> 8) & $ff,
+							_b_baixo = (_pixel_baixo >> 16) & $ff,
+							_a_baixo = (_pixel_baixo >> 24) & $ff;
+						if (_r_baixo == 0) and (_g_baixo == 0) and (_b_baixo == 0) and (_a_baixo == 255){
+							_hole.borda_down = false;
+						} else{
+							_hole.borda_down = true;
+						}
+						#endregion	
+					}
+				}
+				
+				//desenhar água na posição e se a cor for azul claro
+				if (_r == 0) and (_g == 128) and (_b == 255) and (_a == 255){
+					var _agua = instance_create_layer(_pos_x,_pos_y,"Holes",obj_water);	
+					    _agua.borda = false;
+					    _agua.borda_down = false;
+					if _y > 0{
+						var _pixel_cima = buffer_peek(buffer_room, 4 * (_x + (_y - 1) * _w),buffer_u32);
+						#region borda cima
+						var _r_cima = (_pixel_cima & $ff),
+							_g_cima = (_pixel_cima >> 8) & $ff,
+							_b_cima = (_pixel_cima >> 16) & $ff,
+							_a_cima = (_pixel_cima >> 24) & $ff;
+						if (_r_cima == 0) and (_g_cima == 128) and (_b_cima == 255) and (_a_cima == 255){
+							_agua.borda = false;
+						} else{
+							_agua.borda = true;
+						}
+						#endregion
+					}
+				
+					if _y < _h - 1{
+						var _pixel_baixo = buffer_peek(buffer_room, 4 * (_x + (_y + 1) * _w),buffer_u32);
+						#region borda baixo
+						var _r_baixo = (_pixel_baixo & $ff),
+							_g_baixo = (_pixel_baixo >> 8) & $ff,
+							_b_baixo = (_pixel_baixo >> 16) & $ff,
+							_a_baixo = (_pixel_baixo >> 24) & $ff;
+						if (_r_baixo == 0) and (_g_baixo == 128) and (_b_baixo == 255) and (_a_baixo == 255){
+							_agua.borda_down = false;
+						} else{
+							_agua.borda_down = true;
+						}
+						#endregion	
+					}
+				}
+				
+				//desenhar uma jaula 1 na posição e se a cor for amarelo escuro
+				if (_r == 56) and (_g == 56) and (_b == 0) and (_a == 255){
+					instance_create_layer(_pos_x,_pos_y,"Obs",obj_slave_2);	
+				}
 			
-			//desenhar uma cube_fly na posição e se a cor for rosa
-			if (_r == 255) and (_g == 0) and (_b == 255) and (_a == 255) and (obj_game.salas_limpas[sala_atual] == false){
-				var _cubo = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_cube_fly);	
-				_cubo.sala_id = sala_atual;
-				_cubo.inimigo_id = inimigo_count;
-				inimigo_count+=1;
-			}
+				//desenhar uma jaula 2 na posição e se a cor for amarelo escuro
+				if (_r == 56) and (_g == 13) and (_b == 0) and (_a == 255){
+					instance_create_layer(_pos_x,_pos_y,"Obs",obj_slave_3);	
+				}
+				
+				//desenhar uma skull na posição e se a cor for azul escuro
+				if (_r == 0) and (_g == 0) and (_b == 255) and (_a == 255){
+					instance_create_layer(_pos_x,_pos_y,"Obs",obj_skull);	
+				}
+			#endregion
+			
+			#region criar inimigos
+				//desenhar um atirador na posição e se a cor for laranja
+				if (_r == 255) and (_g == 128) and (_b == 0) and (_a == 255) and (obj_game.salas_limpas[sala_atual] == false){
+					if (andar_atual == 1){
+						var _medic = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_medic);	
+						_medic.sala_id = sala_atual;
+						_medic.inimigo_id = inimigo_count;
+						inimigo_count+=1;	
+					} else if (andar_atual == 2){
+						var _masked = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_masked);	
+						_masked.sala_id = sala_atual;
+						_masked.inimigo_id = inimigo_count;
+						inimigo_count+=1;							
+					} else if (andar_atual == 3){
+						var _gas_masked = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_gas_masked);	
+						_gas_masked.sala_id = sala_atual;
+						_gas_masked.inimigo_id = inimigo_count;
+						inimigo_count+=1;						
+					}
+				}
+			
+				//desenhar uma aranha na posição e se a cor for amarelo
+				if (_r == 255) and (_g == 255) and (_b == 0) and (_a == 255) and (obj_game.salas_limpas[sala_atual] == false){
+					if (andar_atual == 1){								
+						var _arac = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_aranha);	
+						_arac.sala_id = sala_atual;
+						_arac.inimigo_id = inimigo_count;
+						inimigo_count+=1;
+					} else 	if (andar_atual == 2){
+						var _arac = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_aranha);	
+						_arac.sala_id = sala_atual;
+						_arac.inimigo_id = inimigo_count;
+						inimigo_count+=1;						
+					} else 	if (andar_atual == 3){
+						var _arac = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_aranha);	
+						_arac.sala_id = sala_atual;
+						_arac.inimigo_id = inimigo_count;
+						inimigo_count+=1;						
+					}
+				}
+			
+				//desenhar um cube_fly na posição e se a cor for rosa
+				if (_r == 255) and (_g == 0) and (_b == 255) and (_a == 255) and (obj_game.salas_limpas[sala_atual] == false){
+					if (andar_atual == 1){					
+						var _cubo = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_cube_fly);	
+						_cubo.sala_id = sala_atual;
+						_cubo.inimigo_id = inimigo_count;
+						inimigo_count+=1;
+					} else if (andar_atual == 2){
+						var _cubo = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_cube_fly_2);	
+						_cubo.sala_id = sala_atual;
+						_cubo.inimigo_id = inimigo_count;
+						inimigo_count+=1;						
+					} else if (andar_atual == 3){
+						
+					}
+				}
+
+				//desenhar uma mosca na posição e se a cor for vermelho claro
+				if (_r == 255) and (_g == 102) and (_b == 179) and (_a == 255) and (obj_game.salas_limpas[sala_atual] == false){		
+					if (andar_atual == 1){					
+						var _mosca = instance_create_layer(_pos_x, _pos_y, "Enemies", obj_mosca);
+						_mosca.sala_id = sala_atual;
+						_mosca.inimigo_id = inimigo_count;
+						inimigo_count+=1;
+					} else if (andar_atual == 2){
+						var _mosca = instance_create_layer(_pos_x, _pos_y, "Enemies", obj_mosca_2);
+						_mosca.sala_id = sala_atual;
+						_mosca.inimigo_id = inimigo_count;
+						inimigo_count+=1;					
+					} else if (andar_atual == 3){
+						
+					}
+				}
+			
+				//desenhar um bombardeiro na posição e se a cor for rosa claro
+				if (_r == 255) and (_g == 102) and (_b == 102) and (_a == 255) and (obj_game.salas_limpas[sala_atual] == false){		
+					if (andar_atual == 1){					
+						var _bomb = instance_create_layer(_pos_x, _pos_y, "Enemies", obj_bomber);
+						_bomb.sala_id = sala_atual;
+						_bomb.inimigo_id = inimigo_count;
+						inimigo_count+=1;
+					} else if (andar_atual == 2){
+						var _bomb = instance_create_layer(_pos_x, _pos_y, "Enemies", obj_bomber_2);
+						_bomb.sala_id = sala_atual;
+						_bomb.inimigo_id = inimigo_count;
+						inimigo_count+=1;				
+					} else if (andar_atual == 3){
+						
+					}				
+
+				}			
+			#endregion
 		}
 	}
 	buffer_delete(buffer_room);
 }
 
-function room_limpar(){
-	with(obj_spike){
-		instance_destroy();	
-	}
-	with(obj_water){
-		instance_destroy();	
-	}
-	with(obj_hole){
-		instance_destroy();	
-	}
-	with(obj_obs){
-		instance_destroy();	
-	}
-	with(obj_eng){
-		instance_destroy();	
-	}
-	with(obj_morte){
-		instance_destroy();	
-	}
+function room_limpar(){	
+	#region itens
+		with(obj_eng){
+			instance_destroy();	
+		}
+		with(obj_hp_potion){
+			instance_destroy();	
+		}
+	#endregion
+	
+	#region decoração
+		with(obj_spike){
+			instance_destroy();	
+		}
+		with(obj_water){
+			instance_destroy();	
+		}
+		with(obj_hole){
+			instance_destroy();	
+		}
+		with(obj_obs){
+			instance_destroy();	
+		}
+		with(obj_morte){
+			instance_destroy();	
+		}
+		with(obj_obs_2){
+			instance_destroy();	
+		}
+		with(obj_skull){
+			instance_destroy();	
+		}
+		with(obj_slave_1){
+			instance_destroy();	
+		}
+		with(obj_slave_2){
+			instance_destroy();	
+		}
+		with(obj_slave_3){
+			instance_destroy();	
+		}
+		with(obj_bullet_spot){
+			instance_destroy();	
+		}
+	#endregion
 }
 

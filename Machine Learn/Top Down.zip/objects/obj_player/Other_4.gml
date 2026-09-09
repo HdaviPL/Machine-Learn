@@ -12,11 +12,16 @@ if (direc_enter != ""){
 	}
 }
 
-if room != rm_start{
-	if arma_equip != noone{
+if arma_equip != noone{
+	if room == rm_start{
+		var _arma_nova = instance_create_layer(obj_player.x,obj_player.y,"Items", obj_cano);
+		item_alvo = _arma_nova;	
+		_arma_nova.sprite_index = _arma_nova.sprite_equip;	
+		_arma_nova.no_chao = false;			
+	} else{
 		var _arma_nova = instance_create_layer(obj_player.x,obj_player.y,"Items", obj_player.arma_equip);
 		item_alvo = _arma_nova;	
 		_arma_nova.sprite_index = _arma_nova.sprite_equip;	
-		_arma_nova.no_chao = false;	
+		_arma_nova.no_chao = false;			
 	}
 }

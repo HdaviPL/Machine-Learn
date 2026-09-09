@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_aranha",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Andar_1",
+    "path":"folders/Scripts/scr_enemies/Andar_1.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

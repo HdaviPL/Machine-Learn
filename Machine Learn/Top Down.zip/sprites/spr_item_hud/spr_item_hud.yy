@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"spr_HUD",
-    "path":"folders/Sprites/spr_HUD.yy",
+    "name":"spr_molduras",
+    "path":"folders/Sprites/spr_HUD/spr_molduras.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

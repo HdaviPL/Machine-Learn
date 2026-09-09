@@ -7,13 +7,12 @@ var my = device_mouse_y_to_gui(0) - _align_y;
 if point_in_rectangle(mx,my,x_gui,y_gui - 100,x_gui + 150,y_gui + 60){
 	tam += 0.1;
 	tam = clamp(tam,tam_min,tam_max);
-	if  mouse_check_button_pressed(mb_left){
-		if !instance_exists(obj_transition){
-			obj_player.state = player_reset;	
+	if mouse_check_button_pressed(mb_left) and (!instance_exists(obj_transition)){
 			var _transition = instance_create_layer(0,0,"Instances_room",obj_transition);
 			_transition.troca_room = true;
 			_transition.room_destino = rm_start;
-		}
+			obj_player.mortes += 1;
+			obj_player.state = player_reset;	
 	}
 }else{
 	tam -= 0.1;

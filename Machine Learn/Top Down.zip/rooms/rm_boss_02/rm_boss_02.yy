@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"rm_boss_02",
-  "creationCodeFile":"",
+  "creationCodeFile":"rooms/rm_boss_02/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
@@ -61,8 +61,8 @@
   ],
   "name":"rm_boss_02",
   "parent":{
-    "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "name":"rm_boss",
+    "path":"folders/Rooms/rm_boss.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
@@ -82,7 +82,7 @@
   },
   "sequenceId":null,
   "views":[
-    {"hborder":32,"hport":1080,"hspeed":-1,"hview":324,"inherit":false,"objectId":null,"vborder":32,"visible":true,"vspeed":-1,"wport":1920,"wview":576,"xport":-320,"xview":-94,"yport":-6,"yview":0,},
+    {"hborder":32,"hport":324,"hspeed":-1,"hview":324,"inherit":false,"objectId":null,"vborder":32,"visible":true,"vspeed":-1,"wport":576,"wview":576,"xport":-96,"xview":-96,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},

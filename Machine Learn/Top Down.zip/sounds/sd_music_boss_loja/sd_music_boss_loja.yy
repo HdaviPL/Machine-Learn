@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sd_music_boss_loja",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":26.181833,
+  "exportDir":"",
+  "name":"sd_music_boss_loja",
+  "parent":{
+    "name":"Bosses",
+    "path":"folders/Sounds/Bosses.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":48000,
+  "soundFile":"sd_music_boss_loja.wav",
+  "volume":1.0,
+}

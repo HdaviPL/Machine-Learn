@@ -10,8 +10,8 @@
   "name":"obj_masked",
   "overriddenProperties":[],
   "parent":{
-    "name":"enemies",
-    "path":"folders/Objetos/obj_enemy/enemies.yy",
+    "name":"Andar_2",
+    "path":"folders/Objetos/obj_person/obj_enemy/enemies/Andar_2.yy",
   },
   "parentObjectId":{
     "name":"obj_enemy",

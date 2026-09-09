@@ -4,8 +4,8 @@ hspd = 0;
 vspd = 0;
 
 //vida
-hp = 5;
-hp_max = 5;
+hp = 6;
+hp_max = 6;
 
 //knockback
 kb_timer = 0;
@@ -50,7 +50,6 @@ melee_timer_max = 24;
 shot_timer = 0;
 arma_angle = 0;
 
-
 //struct
 inputs = {
 	up: ord("W"),
@@ -71,21 +70,16 @@ roll	=	false;
 quick	=	false;
 
 //itens
-item_alvo = obj_gun_0;
-arma_equip = obj_gun_0;
-timer_quick = 60;
-arma_need_criar = false;
+item_alvo = noone;
+arma_equip = obj_cano;
+timer_quick = 24;
+
+//poções
+hp_potion = 0;
+hp_potion_max = 8;
 
 direc_enter = "";
 
 state = player_free;
 
-#region	//criar a sombra (isso foi uma misera de fazer)
-var _shadow = instance_create_layer(x,y,"Shadows",obj_shadow)
-if _shadow != noone{
-	_shadow.alvo = obj_player;
-	_shadow.correction_v = 13;
-	_shadow.correction_h = 0;
-	_shadow.side = sign(image_xscale);
-}
-#endregion
+mortes = 0;

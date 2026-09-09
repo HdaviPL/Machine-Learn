@@ -27,7 +27,7 @@
   "origin":4,
   "parent":{
     "name":"spr_cube",
-    "path":"folders/Sprites/spr_enemies/spr_cube.yy",
+    "path":"folders/Sprites/spr_person/spr_enemies/spr_enemies_andar_1/spr_cube.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

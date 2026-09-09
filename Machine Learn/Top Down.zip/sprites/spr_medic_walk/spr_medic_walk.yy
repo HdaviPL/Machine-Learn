@@ -27,7 +27,7 @@
   "origin":4,
   "parent":{
     "name":"spr_medic",
-    "path":"folders/Sprites/spr_enemies/spr_medic.yy",
+    "path":"folders/Sprites/spr_person/spr_enemies/spr_enemies_andar_1/spr_medic.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

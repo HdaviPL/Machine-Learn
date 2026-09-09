@@ -26,7 +26,7 @@
   "origin":9,
   "parent":{
     "name":"spr_ranged",
-    "path":"folders/Sprites/spr_armas/spr_ranged.yy",
+    "path":"folders/Sprites/spr_guns/spr_ranged.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

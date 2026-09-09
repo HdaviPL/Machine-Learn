@@ -12,7 +12,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"obj_enemy",
-    "path":"folders/Objetos/obj_enemy.yy",
+    "path":"folders/Objetos/obj_person/obj_enemy.yy",
   },
   "parentObjectId":null,
   "persistent":false,

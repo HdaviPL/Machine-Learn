@@ -4,7 +4,7 @@ lins	= ceil(display_get_gui_height()/ tam);
 
 //animação
 img		= 0;
-img_spd = (sprite_get_speed(spr_transition) / game_get_speed(gamespeed_fps)*3);
+img_spd = (sprite_get_speed(spr_transition) / game_get_speed(gamespeed_fps)*1.5);
 
 //total da animação
 img_num = sprite_get_number(spr_transition) - 1;

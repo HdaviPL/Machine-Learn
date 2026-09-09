@@ -1,7 +1,6 @@
 event_inherited();
-
-dano = 2;
-cooldown = 6;
+dano = 5;
+cooldown = 120;
 sprite_equip = spr_arma_2;
-dist_player = 28;
-spd  = 8;
+dist_player = 32;
+spd  = 10;

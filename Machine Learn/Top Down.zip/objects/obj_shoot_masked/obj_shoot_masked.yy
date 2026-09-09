@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"projectiles",
-    "path":"folders/Objetos/obj_enemy/projectiles.yy",
+    "path":"folders/Objetos/obj_person/obj_enemy/projectiles.yy",
   },
   "parentObjectId":{
     "name":"obj_projectiles",

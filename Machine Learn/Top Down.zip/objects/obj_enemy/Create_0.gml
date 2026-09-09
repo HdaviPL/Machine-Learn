@@ -13,8 +13,11 @@ timer_start = 60;
 
 hspd = 0;
 vspd = 0;
+
 state = noone;
 
 //já morreu
 sala_id = -1;
 inimigo_id = -1;
+
+boss = false;

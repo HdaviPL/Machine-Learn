@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"spr_melee",
-    "path":"folders/Sprites/spr_armas/spr_melee.yy",
+    "path":"folders/Sprites/spr_guns/spr_melee.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

@@ -6,8 +6,8 @@
   "name":"obj_spike",
   "overriddenProperties":[],
   "parent":{
-    "name":"obj_blocks",
-    "path":"folders/Objetos/obj_blocks.yy",
+    "name":"obj_objects",
+    "path":"folders/Objetos/obj_blocks/obj_objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

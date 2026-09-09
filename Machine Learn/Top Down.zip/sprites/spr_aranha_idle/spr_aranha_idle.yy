@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"spr_aranha",
-    "path":"folders/Sprites/spr_enemies/spr_aranha.yy",
+    "path":"folders/Sprites/spr_person/spr_enemies/spr_enemies_andar_1/spr_aranha.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

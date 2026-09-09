@@ -5,7 +5,7 @@ if (enter){
 	if (img - img_num > colun + 5){
 		enter = false;
 		if (troca_room == true){
-			obj_player.arma_need_criar = true;
+
 			room_goto(room_destino);
 			if (room_destino == rm_start){
 				var _x = room_width/2;

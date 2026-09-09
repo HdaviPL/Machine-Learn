@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_room",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"scr_gerais",
+    "path":"folders/Scripts/scr_gerais.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

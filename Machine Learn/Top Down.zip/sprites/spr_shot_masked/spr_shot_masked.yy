@@ -26,7 +26,7 @@
   "origin":4,
   "parent":{
     "name":"spr_projectiles",
-    "path":"folders/Sprites/spr_enemies/spr_projectiles.yy",
+    "path":"folders/Sprites/spr_person/spr_enemies/spr_projectiles.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

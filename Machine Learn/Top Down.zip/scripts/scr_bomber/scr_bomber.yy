@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_bomber",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_bomber",
+  "parent":{
+    "name":"Andar_1",
+    "path":"folders/Scripts/scr_enemies/Andar_1.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

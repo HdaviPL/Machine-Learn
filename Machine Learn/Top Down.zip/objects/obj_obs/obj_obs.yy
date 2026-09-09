@@ -6,8 +6,8 @@
   "name":"obj_obs",
   "overriddenProperties":[],
   "parent":{
-    "name":"obj_blocks",
-    "path":"folders/Objetos/obj_blocks.yy",
+    "name":"obj_objects",
+    "path":"folders/Objetos/obj_blocks/obj_objects.yy",
   },
   "parentObjectId":{
     "name":"obj_solid",

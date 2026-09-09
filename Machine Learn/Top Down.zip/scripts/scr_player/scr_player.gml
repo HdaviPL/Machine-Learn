@@ -7,11 +7,6 @@ function player_idle(){
 		state = player_free;	
 	}
 	
-	//rolar
-	if (roll) and (roll_timer_start <= 0){
-		audio_play_sound(sd_dash,1,false);
-		state = player_roll;	
-	} 
 		//bugs de flip da enquanto segura A e D corrigidos
 	if (right and left){
 		state = player_idle;	
@@ -56,12 +51,6 @@ function player_free(){
 	if (hspd == 0 and vspd == 0){
 		state = player_idle;	
 	}
-	
-	//rolar
-	if (roll) and (roll_timer_start <= 0){
-		audio_play_sound(sd_dash,1,false);
-		state = player_roll;	
-	} 
 
 	//atacar melee
 	if (attack) and (item_alvo != noone) and (melee_timer <= 0) and (item_alvo.is_melee){
@@ -76,11 +65,13 @@ function player_free(){
 
 #region Roll
 function player_roll(){
+	
 	sprite_index = spr_player_roll;
 	if hspd != 0{
 		image_xscale = sign(hspd);
 	}
 	if roll_timer <= 0{
+		audio_play_sound(sd_dash,1,false);
 		roll_x = last_dir_x;
 		roll_y = last_dir_y;
 		roll_timer = roll_timer_max;
@@ -143,17 +134,12 @@ function player_dead(){
 #region Melee
 function player_attack_melee(){
 	sprite_index = spr_player_attack;
+	audio_play_sound(sd_melee_attack,1,false);
 	if !instance_exists(obj_melee){
 		var _melee = instance_create_layer(12 + item_alvo.dist_player,item_alvo.y,"Player",obj_melee);
 		_melee.dano = item_alvo.dano;
 	}
 	melee_timer = melee_timer_max;
-		
-	//rolar
-	if (roll) and (roll_timer_start <= 0){
-		audio_play_sound(sd_dash,1,false);
-		state = player_roll;	
-	} 
 	
 	state = player_free;
 }
@@ -180,18 +166,20 @@ function player_attack_shot(){
 	//distância y do centro do player até o lugar onde ela vai sair
 	var _shoot_y = y + lengthdir_y(item_alvo.dist_player, _angle);
 	//criar a instancia da arma
-	var _shoot = instance_create_layer(_shoot_x,_shoot_y,"Player",obj_shoot_player);
-	//decidir para aonde a bala vai
-	_shoot.angle = point_direction(x,y,mouse_x,mouse_y);
-	_shoot.dano = item_alvo.dano;
-	_shoot.spd	= item_alvo.spd;
+	
+	for (var i = 0; i < item_alvo.qtd_tiros; i ++){
+		var _shoot = instance_create_layer(_shoot_x,_shoot_y,"Player",obj_shoot_player);
+		//decidir para aonde a bala vai
+		var _ang = point_direction(x,y,mouse_x,mouse_y);
+		if (arma_equip == obj_gun_4){
+			_shoot.angle = _ang + ((i * 15 - 22.5));
+		} else{
+			_shoot.angle = _ang;			
+		}		
+		_shoot.dano = item_alvo.dano;
+		_shoot.spd	= item_alvo.spd;
+	}
 	#endregion
-		
-	//rolar
-	if (roll) and (roll_timer_start <= 0){
-		audio_play_sound(sd_dash,1,false);
-		state = player_roll;	
-	} 
 	
 	//volar pro estado free
 	if shot_timer <= 0{
@@ -244,7 +232,7 @@ function player_knockback(){
 	}
 }
 #endregion
-
+ 
 #region Inputs 
 function player_inputs(){
 	//movimentação
@@ -272,8 +260,8 @@ function player_inputs(){
 
 #region Reset
 function player_reset(){
-	hp = 5;
-	hp_max = 5;
+	hp = 6;
+	hp_max = 6;
 	hspd = 0;
 	vspd = 0;
 	inv_timer = 0;
@@ -287,11 +275,11 @@ function player_reset(){
 	roll_ai_cnt = 0;
 	melee_timer = 0;
 	shot_timer = 0;
-	arma_equip = obj_gun_0;
-	item_alvo = obj_gun_0;
+	arma_equip = obj_cano;
 	direc_enter = "";
 	input_lock = 40;
 	global.engrenagens = 0;
+	global.free_shop = false;
 	state = player_free;
 }
 #endregion

@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"scr_gas_masked",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"Andar_3",
+    "path":"folders/Scripts/scr_enemies/Andar_3.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

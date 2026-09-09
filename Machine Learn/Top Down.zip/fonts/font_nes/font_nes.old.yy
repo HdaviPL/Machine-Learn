@@ -98,8 +98,8 @@
   "maintainGms1Font":false,
   "name":"font_nes",
   "parent":{
-    "name":"Top Down.zip",
-    "path":"Top Down.zip.yyp",
+    "name":"Fonts",
+    "path":"folders/Fonts.yy",
   },
   "pointRounding":0,
   "ranges":[

@@ -15,20 +15,20 @@ assim facilita pra balancear a dificuldade dos andares
 
 if room == rm_game_01{	
 	spr_atual = spr_room_1;	
+	loja = rm_loja_01;
 	boss = rm_boss_01;	
 	andar_atual = 1;
 } else if room == rm_game_02{
 	spr_atual = spr_room_2;
+	loja = rm_loja_02;
 	boss = rm_boss_02;
 	andar_atual = 2;
 } else if room == rm_game_03{
 	spr_atual = spr_room_3;
+	loja = rm_loja_03;
 	boss = rm_boss_03;	
 	andar_atual = 3;
 }
-
-//montar a organização das salas
-randomize();
 
 frames=[];
 for (var i = 0; i < sprite_get_number(spr_atual); i++){

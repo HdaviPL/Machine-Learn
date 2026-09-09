@@ -27,7 +27,7 @@
   "origin":4,
   "parent":{
     "name":"spr_masked",
-    "path":"folders/Sprites/spr_enemies/spr_masked.yy",
+    "path":"folders/Sprites/spr_person/spr_enemies/spr_enemies_andar_2/spr_masked.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
