@@ -23,7 +23,7 @@ if (dist <= dist_min) and inicial_timer <= 0{
 	vspd = lerp(vspd, _spd_y, 0.1);
 	
 	var _list = ds_list_create();	
-	var _perto = collision_circle_list(x,y,8,obj_mosca, false, true, _list, false);
+	var _perto = collision_circle_list(x,y,8,obj_eng, false, true, _list, false);
 	var _repul_x = 0;
 	var _repul_y = 0;	
 	if (_perto) > 0{
@@ -42,6 +42,3 @@ if (dist <= dist_min) and inicial_timer <= 0{
 	}
 	ds_list_destroy(_list);
 }
-
-
-

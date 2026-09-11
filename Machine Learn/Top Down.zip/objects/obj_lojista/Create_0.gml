@@ -27,6 +27,7 @@ timer_shoot_exp_max = 60;
 timer_walk = 0;
 timer_walk_max = 60;
 
+timer_start = 90;
 //piscar branco/cor que eu escolho toda vez que toma dano
 alpha_flash = 1;
 hit_timer = 0;

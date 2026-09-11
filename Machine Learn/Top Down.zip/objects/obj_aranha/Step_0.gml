@@ -13,6 +13,3 @@ if timer_to_idle > 0{
 	timer_to_idle--;	
 }
 	
-
-//virar o lado;
-	image_xscale = sign(obj_player.x - x);

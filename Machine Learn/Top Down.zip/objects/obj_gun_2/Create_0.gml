@@ -1,6 +1,8 @@
 event_inherited();
-dano = 5;
-cooldown = 120;
+dano = 8;
+cooldown = 100;
 sprite_equip = spr_arma_2;
 dist_player = 32;
 spd  = 10;
+
+can_pef = true;

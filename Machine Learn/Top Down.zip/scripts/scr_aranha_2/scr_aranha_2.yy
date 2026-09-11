@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_aranha_2",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_aranha_2",
+  "parent":{
+    "name":"Andar_2",
+    "path":"folders/Scripts/scr_enemies/Andar_2.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

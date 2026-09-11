@@ -9,7 +9,7 @@ hit_timer = 0;
 hit_timer_max = 6;
 
 //começar na room
-timer_start = 60;
+timer_start = 90;
 
 hspd = 0;
 vspd = 0;

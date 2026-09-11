@@ -27,3 +27,5 @@ spd  = 1;
 qtd_tiros = 1;
 
 no_chao = true;
+
+can_pef = false;

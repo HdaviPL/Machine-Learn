@@ -12,9 +12,15 @@ if i_frame > 0{
 if hit_timer > 0{
 	hit_timer--;	
 }
+if timer_start > 0{
+	timer_start--;	
+}
 #endregion
 
 if (hp <= 0){
 	state = loj_death;	
 }
-script_execute(state);
+
+if (timer_start <= 0){
+	script_execute(state);
+}

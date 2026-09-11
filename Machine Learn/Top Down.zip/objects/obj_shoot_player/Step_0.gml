@@ -4,9 +4,11 @@ y += vspd;
 image_angle = angle;
 
 if place_meeting(x,y,obj_wall){
-	instance_create_layer(x,y,"Player",obj_destroy_shoot);
-	audio_play_sound(sd_hit_wall,1,false);
-	instance_destroy();	
+	if (obj_player.item_alvo.is_ranged == true) and (obj_player.item_alvo.can_pef == false){
+		instance_create_layer(x,y,"Player",obj_destroy_shoot);
+		audio_play_sound(sd_hit_wall,1,false);
+		instance_destroy();
+	}
 }
 var _enemy = instance_place(x,y,obj_enemy);
 if (_enemy != noone){
@@ -21,7 +23,9 @@ if (_enemy != noone){
 		_dano_count._y = y;
 		_dano_count.depth = -500;
 		var _spot = instance_create_layer( x, y, "Shadows", obj_bullet_spot);
-		instance_destroy();
+		if (obj_player.item_alvo.is_ranged == true) and (obj_player.item_alvo.can_pef == false){
+			instance_destroy();
+		}
 	}
 }
 
@@ -37,7 +41,9 @@ if (_target != noone){
 		_dano_count._y = y;
 		_dano_count.depth = -500;
 		var _spot = instance_create_layer( x, y, "Shadows", obj_bullet_spot);
-		instance_destroy();
+		if (obj_player.item_alvo.is_ranged == true) and (obj_player.item_alvo.can_pef == false){
+			instance_destroy();
+		}
 	}
 }
 
@@ -55,6 +61,8 @@ if (_loj != noone){
 		_dano_count._y = y;
 		_dano_count.depth = -500;
 		var _spot = instance_create_layer( x, y, "Shadows", obj_bullet_spot);
-		instance_destroy();
+		if (obj_player.item_alvo.is_ranged == true) and (obj_player.item_alvo.can_pef == false){
+			instance_destroy();
+		}
 	}
 }

@@ -114,7 +114,7 @@ if (_block){
 if (place_meeting(x, y, obj_player)) and (obj_player.item_alvo != noone){
 	if (_block){
 	sprite_index = spr_porta_open;
-	obj_player.input_lock = 60;
+	obj_player.input_lock = 90;
 	obj_player.direc_enter = direc;
 	if (!instance_exists(obj_transition)){
 		var _transition = instance_create_layer(0, 0, "Instances_room", obj_transition);	

@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"spr_bosses",
-    "path":"folders/Sprites/spr_person/spr_bosses.yy",
+    "name":"spr_robo",
+    "path":"folders/Sprites/spr_person/spr_bosses/spr_robo.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

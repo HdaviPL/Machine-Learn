@@ -167,97 +167,103 @@ function room_mostrar(){
 			#endregion
 			
 			#region criar inimigos
-				//desenhar um atirador na posição e se a cor for laranja
-				if (_r == 255) and (_g == 128) and (_b == 0) and (_a == 255) and (obj_game.salas_limpas[sala_atual] == false){
-					if (andar_atual == 1){
-						var _medic = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_medic);	
-						_medic.sala_id = sala_atual;
-						_medic.inimigo_id = inimigo_count;
-						inimigo_count+=1;	
-					} else if (andar_atual == 2){
-						var _masked = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_masked);	
-						_masked.sala_id = sala_atual;
-						_masked.inimigo_id = inimigo_count;
-						inimigo_count+=1;							
-					} else if (andar_atual == 3){
-						var _gas_masked = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_gas_masked);	
-						_gas_masked.sala_id = sala_atual;
-						_gas_masked.inimigo_id = inimigo_count;
-						inimigo_count+=1;						
+				#region atirador
+					//desenhar um atirador na posição e se a cor for laranja
+					if (_r == 255) and (_g == 128) and (_b == 0) and (_a == 255) and (obj_game.salas_limpas[sala_atual] == false){
+						if (andar_atual == 1){
+							var _medic = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_medic);	
+							_medic.sala_id = sala_atual;
+							_medic.inimigo_id = inimigo_count;
+							inimigo_count+=1;	
+						} else if (andar_atual == 2){
+							var _masked = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_masked);	
+							_masked.sala_id = sala_atual;
+							_masked.inimigo_id = inimigo_count;
+							inimigo_count+=1;							
+						} else if (andar_atual == 3){
+							var _gas_masked = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_gas_masked);	
+							_gas_masked.sala_id = sala_atual;
+							_gas_masked.inimigo_id = inimigo_count;
+							inimigo_count+=1;						
+						}
 					}
-				}
-			
-				//desenhar uma aranha na posição e se a cor for amarelo
-				if (_r == 255) and (_g == 255) and (_b == 0) and (_a == 255) and (obj_game.salas_limpas[sala_atual] == false){
-					if (andar_atual == 1){								
-						var _arac = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_aranha);	
-						_arac.sala_id = sala_atual;
-						_arac.inimigo_id = inimigo_count;
-						inimigo_count+=1;
-					} else 	if (andar_atual == 2){
-						var _arac = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_aranha);	
-						_arac.sala_id = sala_atual;
-						_arac.inimigo_id = inimigo_count;
-						inimigo_count+=1;						
-					} else 	if (andar_atual == 3){
-						var _arac = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_aranha);	
-						_arac.sala_id = sala_atual;
-						_arac.inimigo_id = inimigo_count;
-						inimigo_count+=1;						
+				#endregion
+				#region aranha
+					//desenhar uma aranha na posição e se a cor for amarelo
+					if (_r == 255) and (_g == 255) and (_b == 0) and (_a == 255) and (obj_game.salas_limpas[sala_atual] == false){
+						if (andar_atual == 1){								
+							var _arac = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_aranha);	
+							_arac.sala_id = sala_atual;
+							_arac.inimigo_id = inimigo_count;
+							inimigo_count+=1;
+						} else 	if (andar_atual == 2){
+							var _arac = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_aranha_2);	
+							_arac.sala_id = sala_atual;
+							_arac.inimigo_id = inimigo_count;
+							inimigo_count+=1;						
+						} else 	if (andar_atual == 3){
+							var _arac = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_aranha);	
+							_arac.sala_id = sala_atual;
+							_arac.inimigo_id = inimigo_count;
+							inimigo_count+=1;						
+						}
 					}
-				}
-			
-				//desenhar um cube_fly na posição e se a cor for rosa
-				if (_r == 255) and (_g == 0) and (_b == 255) and (_a == 255) and (obj_game.salas_limpas[sala_atual] == false){
-					if (andar_atual == 1){					
-						var _cubo = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_cube_fly);	
-						_cubo.sala_id = sala_atual;
-						_cubo.inimigo_id = inimigo_count;
-						inimigo_count+=1;
-					} else if (andar_atual == 2){
-						var _cubo = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_cube_fly_2);	
-						_cubo.sala_id = sala_atual;
-						_cubo.inimigo_id = inimigo_count;
-						inimigo_count+=1;						
-					} else if (andar_atual == 3){
+				#endregion
+				#region cube fly
+					//desenhar um cube_fly na posição e se a cor for rosa
+					if (_r == 255) and (_g == 0) and (_b == 255) and (_a == 255) and (obj_game.salas_limpas[sala_atual] == false){
+						if (andar_atual == 1){					
+							var _cubo = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_cube_fly);	
+							_cubo.sala_id = sala_atual;
+							_cubo.inimigo_id = inimigo_count;
+							inimigo_count+=1;
+						} else if (andar_atual == 2){
+							var _cubo = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_cube_fly_2);	
+							_cubo.sala_id = sala_atual;
+							_cubo.inimigo_id = inimigo_count;
+							inimigo_count+=1;						
+						} else if (andar_atual == 3){
 						
+						}
 					}
-				}
+				#endregion
+				#region mosca
+					//desenhar uma mosca na posição e se a cor for vermelho claro
+					if (_r == 255) and (_g == 102) and (_b == 179) and (_a == 255) and (obj_game.salas_limpas[sala_atual] == false){		
+						if (andar_atual == 1){					
+							var _mosca = instance_create_layer(_pos_x, _pos_y, "Enemies", obj_mosca);
+							_mosca.sala_id = sala_atual;
+							_mosca.inimigo_id = inimigo_count;
+							inimigo_count+=1;
+						} else if (andar_atual == 2){
+							var _mosca = instance_create_layer(_pos_x, _pos_y, "Enemies", obj_mosca_2);
+							_mosca.sala_id = sala_atual;
+							_mosca.inimigo_id = inimigo_count;
+							inimigo_count+=1;					
+						} else if (andar_atual == 3){
+						
+						}
+					}
+				#endregion
+				#region bomber
+					//desenhar um bombardeiro na posição e se a cor for rosa claro
+					if (_r == 255) and (_g == 102) and (_b == 102) and (_a == 255) and (obj_game.salas_limpas[sala_atual] == false){		
+						if (andar_atual == 1){					
+							var _bomb = instance_create_layer(_pos_x, _pos_y, "Enemies", obj_bomber);
+							_bomb.sala_id = sala_atual;
+							_bomb.inimigo_id = inimigo_count;
+							inimigo_count+=1;
+						} else if (andar_atual == 2){
+							var _bomb = instance_create_layer(_pos_x, _pos_y, "Enemies", obj_bomber_2);
+							_bomb.sala_id = sala_atual;
+							_bomb.inimigo_id = inimigo_count;
+							inimigo_count+=1;				
+						} else if (andar_atual == 3){
+						
+						}				
 
-				//desenhar uma mosca na posição e se a cor for vermelho claro
-				if (_r == 255) and (_g == 102) and (_b == 179) and (_a == 255) and (obj_game.salas_limpas[sala_atual] == false){		
-					if (andar_atual == 1){					
-						var _mosca = instance_create_layer(_pos_x, _pos_y, "Enemies", obj_mosca);
-						_mosca.sala_id = sala_atual;
-						_mosca.inimigo_id = inimigo_count;
-						inimigo_count+=1;
-					} else if (andar_atual == 2){
-						var _mosca = instance_create_layer(_pos_x, _pos_y, "Enemies", obj_mosca_2);
-						_mosca.sala_id = sala_atual;
-						_mosca.inimigo_id = inimigo_count;
-						inimigo_count+=1;					
-					} else if (andar_atual == 3){
-						
-					}
-				}
-			
-				//desenhar um bombardeiro na posição e se a cor for rosa claro
-				if (_r == 255) and (_g == 102) and (_b == 102) and (_a == 255) and (obj_game.salas_limpas[sala_atual] == false){		
-					if (andar_atual == 1){					
-						var _bomb = instance_create_layer(_pos_x, _pos_y, "Enemies", obj_bomber);
-						_bomb.sala_id = sala_atual;
-						_bomb.inimigo_id = inimigo_count;
-						inimigo_count+=1;
-					} else if (andar_atual == 2){
-						var _bomb = instance_create_layer(_pos_x, _pos_y, "Enemies", obj_bomber_2);
-						_bomb.sala_id = sala_atual;
-						_bomb.inimigo_id = inimigo_count;
-						inimigo_count+=1;				
-					} else if (andar_atual == 3){
-						
-					}				
-
-				}			
+					}			
+				#endregion
 			#endregion
 		}
 	}
