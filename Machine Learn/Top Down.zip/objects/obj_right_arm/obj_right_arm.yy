@@ -38,6 +38,9 @@
     "name":"spr_right_arm_idle",
     "path":"sprites/spr_right_arm_idle/spr_right_arm_idle.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_right_arm_idle",
+    "path":"sprites/spr_right_arm_idle/spr_right_arm_idle.yy",
+  },
   "visible":true,
 }

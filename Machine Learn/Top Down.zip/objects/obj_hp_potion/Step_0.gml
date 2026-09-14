@@ -1,4 +1,4 @@
-image_index = 1;
+image_index = 0;
 if (place_meeting(x,y,obj_player)){
 	if (obj_player.hp_potion < obj_player.hp_potion_max){
 		obj_player.sprite_index = spr_player_attack;

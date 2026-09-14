@@ -14,3 +14,4 @@ x = alvo.x + lengthdir_x(dist, alvo.arma_angle) + correction_h;
 y = alvo.y + lengthdir_y(dist, alvo.arma_angle) + correction_v;
 
 image_angle = alvo.arma_angle;
+

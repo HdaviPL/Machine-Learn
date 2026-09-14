@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":30.299854,
+  "duration":41.1135,
   "exportDir":"",
   "name":"sd_music_boss_02",
   "parent":{

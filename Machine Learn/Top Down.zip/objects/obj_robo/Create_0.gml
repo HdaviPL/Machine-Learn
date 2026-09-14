@@ -23,7 +23,7 @@ alpha_flash = 1;
 hit_timer = 0;
 hit_timer_max = 6;
 
-timer_start = 60;
+
 state = robo_idle;
 
 boss = true;

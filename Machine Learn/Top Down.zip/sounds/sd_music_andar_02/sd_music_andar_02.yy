@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":57.542458,
+  "duration":57.604916,
   "exportDir":"",
   "name":"sd_music_andar_02",
   "parent":{

@@ -10,8 +10,8 @@
   "name":"obj_hp_potion",
   "overriddenProperties":[],
   "parent":{
-    "name":"obj_items",
-    "path":"folders/Objetos/obj_items.yy",
+    "name":"items",
+    "path":"folders/Objetos/obj_items/items.yy",
   },
   "parentObjectId":{
     "name":"obj_item",

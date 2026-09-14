@@ -4,7 +4,11 @@ if (global.pause == true){
 } else{
 	image_speed = 1;
 }
-#region Timers + Vida
+	
+//velocidade do dash
+spd_roll = spd + 1;
+
+#region Timers + Dano
 if input_lock > 0{
 	input_lock--;	
 }
@@ -23,8 +27,11 @@ if shot_timer > 0{
 if kb_timer > 0{
 	kb_timer--;	
 }
+if timer_dirty > 0{
+	timer_dirty--;	
+}
 	
-var _inimigo = place_meeting(x,y,obj_enemy) or place_meeting(x,y,obj_projectiles) or (place_meeting(x,y,obj_lojista) and obj_lojista.state != loj_shop) or place_meeting(x,y,obj_exp);
+var _inimigo = place_meeting(x,y,obj_enemy) or place_meeting(x,y,obj_projectiles) or (place_meeting(x,y,obj_lojista) and obj_lojista.state != loj_shop) or place_meeting(x,y,obj_exp) or place_meeting(x,y,obj_exp_player);
 
 if (_inimigo or place_meeting(x,y,obj_spike))  and (inv_timer <= 0) and (state != player_roll) and (state != player_dead) and (!instance_exists(obj_transition)){
 	audio_play_sound(sd_hurt, 1, false);
@@ -32,13 +39,55 @@ if (_inimigo or place_meeting(x,y,obj_spike))  and (inv_timer <= 0) and (state !
 }
 #endregion
 
-#region curar
+#region usar itens
+	if (keyboard_check_pressed(ord("H"))) and (hp_potion > 0) and (hp < hp_max){
+		hp_potion -= 1;
+		hp +=1;	
+	}
+	
+	if (mouse_check_button_pressed(mb_middle)) and (bomb > 0){
+		bomb -= 1;
+		instance_create_layer(x, y, "Items", obj_bomb);	
+	}
+#endregion
 
-if (keyboard_check_pressed(ord("H"))) and (hp_potion > 0) and (hp < hp_max){
-	hp_potion -= 1;
-	hp +=1;	
+#region testes (apagar depois)
+if (keyboard_check_pressed(ord("K"))){
+	y = room_height - 244;
 }
+#endregion
 
+#region item effects
+//botas sujas
+if (have_dirty == true) and (hspd != 0 or vspd != 0){
+	if timer_dirty <= 0{
+		timer_dirty = timer_dirty_max;	
+		instance_create_layer(x, y + 13, "Shadows", obj_dirty);
+	}
+}
+//óculos
+if (have_glasses == true){
+	var _enemy = instance_place(x, y, obj_enemy);
+	if ((_enemy) and (state == player_roll) and (_enemy.i_frame <= 0)){
+		_enemy.i_frame = _enemy.i_frame_max;
+		_enemy.hit_timer = _enemy.hit_timer_max;
+		_enemy.hp -= dano_dash;
+		var _dano_count = instance_create_layer(x, y, "Items",obj_damage);
+		_dano_count.timer = _dano_count.timer_max;
+		_dano_count.exib = dano_dash;
+		_dano_count._y = y;
+		_dano_count.depth = -500;
+	}
+}
+//anel
+if (have_ring == true){
+	if (!instance_exists(obj_ring_light)){
+		var _anel = instance_create_layer(x, y, "Shadows", obj_ring_light);
+		_anel.image_alpha = 0.5;
+		_anel.alvo = self;
+		_anel.corection_v = 4;
+	}
+}
 #endregion
 
 player_inputs();

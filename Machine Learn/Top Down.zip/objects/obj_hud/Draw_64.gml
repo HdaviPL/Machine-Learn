@@ -5,7 +5,7 @@
 		var _cor = make_colour_rgb(157,101,76);
 
 		//barra
-		draw_sprite_ext(spr_hud_bar, 0, 288, 0, scale, scale, 0, c_white, 1);
+		draw_sprite_ext(spr_hud_bar, 0, 0, 0, scale, scale, 0, c_white, 1);
 
 		//moldura do item
 		draw_sprite_ext(spr_moldura_val, 0, 1, alt_gui, scale, scale, 0, c_white, 1);
@@ -18,15 +18,21 @@
 		//poções de hp
 		var _f_hp_potion = 0;
 		if (obj_player.hp_potion > 0){
-			_f_hp_potion = 1;	
-		} else{
 			_f_hp_potion = 0;	
+		} else{
+			_f_hp_potion = 1;	
 		}
 		
 		draw_set_font(font_nes);
 		draw_set_colour(_cor);
 		draw_text_transformed(dist_hp_potion + 16, alt_hp_potion - 20, ":" +  string(obj_player.hp_potion), scale, scale, 0);
 		draw_sprite_ext(spr_hp_potion, _f_hp_potion, dist_hp_potion, alt_hp_potion, scale_hp, scale_hp, 0, c_white, 1);
+		
+		//bombas		
+		draw_set_font(font_nes);
+		draw_set_colour(_cor);
+		draw_text_transformed(dist_bomb + 16, alt_bomb - 20, ":" +  string(obj_player.bomb), scale, scale, 0);
+		draw_sprite_ext(spr_bomb, 0, dist_bomb, alt_bomb, scale_bomb, scale_bomb, 0, c_white, 1);
 		
 		
 		

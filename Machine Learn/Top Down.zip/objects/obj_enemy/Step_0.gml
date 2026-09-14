@@ -17,7 +17,7 @@ if (hp <= 0) and (boss == false){
 			var _drop = irandom(2);
 			if (_drop != 0){
 				if (_drop == 1){
-					#region dropar engrenagens
+					#region dropar poções
 							var _qtd = irandom_range(0,1);
 							for(var i = 0; i < _qtd; i++){
 								var _x = x + irandom_range(-10,10);
@@ -27,7 +27,7 @@ if (hp <= 0) and (boss == false){
 						#endregion					
 				} else if (_drop == 2){
 					#region dropar engrenagens
-							var _qtd = irandom_range(1,3);
+							var _qtd = irandom_range(1,2);
 							for(var i = 0; i < _qtd; i++){
 								var _x = x + irandom_range(-10,10);
 								var _y = y + irandom_range(-10,10);

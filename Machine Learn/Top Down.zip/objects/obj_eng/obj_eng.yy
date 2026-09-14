@@ -9,8 +9,8 @@
   "name":"obj_eng",
   "overriddenProperties":[],
   "parent":{
-    "name":"obj_items",
-    "path":"folders/Objetos/obj_items.yy",
+    "name":"engrenagens",
+    "path":"folders/Objetos/obj_items/engrenagens.yy",
   },
   "parentObjectId":null,
   "persistent":false,

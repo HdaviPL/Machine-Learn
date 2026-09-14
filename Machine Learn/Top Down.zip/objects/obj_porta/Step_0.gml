@@ -67,9 +67,19 @@ switch (room){ //decide pra qual sala vai e SE vai pra uma sala
 	break;	
 	
 	case rm_boss_02:
-		obj_music.tipo_music = "boss";
 		troca_room = true;
 		room_destino = rm_game_03;
+		if (instance_exists(obj_right_arm)){
+			obj_music.tipo_music = "boss";
+			if (direc == "up"){
+				porta_block = true;
+			}	
+		} else{
+			if (direc == "up"){
+			obj_music.tipo_music = "silence";
+				porta_block = false;
+			}			
+		}
 	break;
 		
 	case rm_game_03:

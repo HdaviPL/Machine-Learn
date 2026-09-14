@@ -314,6 +314,9 @@ function room_limpar(){
 		with(obj_bullet_spot){
 			instance_destroy();	
 		}
+		with(obj_exp_dirty){
+			instance_destroy();	
+		}
 	#endregion
 }
 

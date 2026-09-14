@@ -10,6 +10,7 @@ if (hp <= 0){
 	hspd = 0;
 	vspd = 0;
 	instance_create_layer(x, y, "Enemies", obj_exp);
+	instance_create_layer(x, y, "Shadows", obj_exp_dirty);	
 	instance_destroy();
 }
 event_inherited();

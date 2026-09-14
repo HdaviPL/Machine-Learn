@@ -61,6 +61,8 @@ sala = "";
 	alt_hp_potion = 1048;
 	scale_hp = 4;
 	
-	
-	
+	//bombas
+	dist_bomb = dist_hp_potion + 176;
+	alt_bomb = 1048;
+	scale_bomb = 4;
 #endregion

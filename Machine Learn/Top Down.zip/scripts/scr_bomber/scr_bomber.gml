@@ -17,6 +17,7 @@ function bomber_exp(){
 		exp_timer--;	
 	} else{
 		instance_create_layer(x, y, "Enemies", obj_exp);
+		instance_create_layer(x, y, "Shadows", obj_exp_dirty);
 		instance_destroy();
 	}
 }

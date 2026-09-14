@@ -137,7 +137,7 @@ function player_attack_melee(){
 	audio_play_sound(sd_melee_attack,1,false);
 	if !instance_exists(obj_melee){
 		var _melee = instance_create_layer(12 + item_alvo.dist_player,item_alvo.y,"Player",obj_melee);
-		_melee.dano = item_alvo.dano;
+		_melee.dano = item_alvo.dano + dano;
 	}
 	melee_timer = melee_timer_max;
 	
@@ -176,7 +176,7 @@ function player_attack_shot(){
 		} else{
 			_shoot.angle = _ang;			
 		}		
-		_shoot.dano = item_alvo.dano;
+		_shoot.dano = item_alvo.dano + dano;
 		_shoot.spd	= item_alvo.spd;
 	}
 	#endregion
@@ -194,7 +194,7 @@ function player_attack_shot(){
 function player_damage(dano){
 	if (inv_timer <= 0){
 		hp -= dano;
-		inv_timer = 60;
+		inv_timer = inv_timer_max;
 		kb_timer = kb_timer_max;
 		kb_started = false;
 		var _enemy = instance_place(x, y, obj_enemy);
@@ -260,6 +260,12 @@ function player_inputs(){
 
 #region Reset
 function player_reset(){
+	bomb = 1;
+	have_ring = false;
+	have_glasses = false;
+	have_dirty = false;
+	spd = 2;
+	dano = 0;
 	hp = 6;
 	hp_max = 6;
 	hspd = 0;

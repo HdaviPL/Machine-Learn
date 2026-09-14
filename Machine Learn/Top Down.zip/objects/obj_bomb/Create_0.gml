@@ -1,0 +1,1 @@
+timer_bomb = 120;

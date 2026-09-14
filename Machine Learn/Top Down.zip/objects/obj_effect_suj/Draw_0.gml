@@ -1,0 +1,2 @@
+depth = 1000;
+draw_sprite_ext(spr_sujeira, image_index, 16, 64, 2.2, 2.2, 0, c_white, 0.5);

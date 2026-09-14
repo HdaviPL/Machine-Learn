@@ -2,6 +2,9 @@
 spd = 2;
 hspd = 0;
 vspd = 0;
+spd_max = 5;
+
+dano = 0;
 
 //vida
 hp = 6;
@@ -18,7 +21,7 @@ kb_dir = 0;
 //rolada
 roll_timer_start = 0;
 roll_timer_start_max = 30;
-spd_roll = 4;
+spd_roll = noone;
 roll_x = 0;
 roll_y = 0;
 roll_timer = 0;
@@ -38,6 +41,7 @@ last_dir_y = 0;
 
 //invencibilidade
 inv_timer =0;
+inv_timer_max = 60;
 
 //travar controles
 input_lock = 0;
@@ -74,9 +78,28 @@ item_alvo = noone;
 arma_equip = obj_cano;
 timer_quick = 24;
 
-//poções
-hp_potion = 0;
-hp_potion_max = 8;
+#region itens passivos
+	//tem botas sujas?
+	have_dirty = false;
+	timer_dirty = 0;
+	timer_dirty_max = 6;
+
+	//tem óculos bolados?
+	have_glasses = false;
+	dano_dash = 1;
+
+	//tem anel?
+	have_ring = false;
+	
+	//poções
+	hp_potion = 0;
+	hp_potion_max = 8;
+	
+	//bombas
+	bomb = 1;
+	bomb_max = 5;
+#endregion
+
 
 direc_enter = "";
 
