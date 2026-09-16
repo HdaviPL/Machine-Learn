@@ -1,0 +1,46 @@
+function cube3_idle(){
+	if timer_to_fly <= 0{
+		timer_to_idle = timer_to_idle_max;
+		state = cube3_fly;
+	}
+}
+
+function cube3_fly(){
+	direc = point_direction(x,y,obj_player.x,obj_player.y);
+	hspd = lengthdir_x(spd,direc);
+	vspd = lengthdir_y(spd,direc);
+	var _list = ds_list_create();	
+	var _perto = collision_circle_list(x,y,8,obj_cube_fly_3, false, true, _list, false);
+	var _repul_x = 0;
+	var _repul_y = 0;	
+	if (_perto) > 0{
+		for (var i = 0; i < _perto; i++){
+			var _cubo = point_direction(self.x, self.y, _list[| i].x, _list[| i].y);
+			if (_list[| i] != self){
+
+				var _x = _cubo + 180;
+				var _y = _cubo + 180;
+				_repul_x += lengthdir_x( spd, _x);
+				_repul_y += lengthdir_y( spd, _y);
+			}
+		}
+			hspd += _repul_x;
+			vspd += _repul_y;
+	}
+	ds_list_destroy(_list);	
+	if timer_to_idle <= 0{
+		timer_to_fly = timer_to_fly_max;
+		state = cube3_idle;	
+	}
+
+}
+
+function cube3_shot(){
+	if (timer_shot > 0){
+		timer_shot--;	
+	} else{
+		var _shoot = instance_create_layer(x, y + 8, "Enemies", obj_shoot_masked);
+		_shoot.angle = point_direction(x,y,obj_player.x,obj_player.y);
+		timer_shot = timer_shot_max;
+	}
+}

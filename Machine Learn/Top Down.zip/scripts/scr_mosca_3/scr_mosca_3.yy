@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_mosca_3",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_mosca_3",
+  "parent":{
+    "name":"Andar_3",
+    "path":"folders/Scripts/scr_enemies/Andar_3.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

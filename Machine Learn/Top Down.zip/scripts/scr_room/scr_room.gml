@@ -202,7 +202,7 @@ function room_mostrar(){
 							_arac.inimigo_id = inimigo_count;
 							inimigo_count+=1;						
 						} else 	if (andar_atual == 3){
-							var _arac = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_aranha);	
+							var _arac = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_aranha_3);	
 							_arac.sala_id = sala_atual;
 							_arac.inimigo_id = inimigo_count;
 							inimigo_count+=1;						
@@ -223,7 +223,10 @@ function room_mostrar(){
 							_cubo.inimigo_id = inimigo_count;
 							inimigo_count+=1;						
 						} else if (andar_atual == 3){
-						
+							var _cubo = instance_create_layer(_pos_x,_pos_y,"Enemies",obj_cube_fly_3);	
+							_cubo.sala_id = sala_atual;
+							_cubo.inimigo_id = inimigo_count;
+							inimigo_count+=1;								
 						}
 					}
 				#endregion
@@ -241,7 +244,10 @@ function room_mostrar(){
 							_mosca.inimigo_id = inimigo_count;
 							inimigo_count+=1;					
 						} else if (andar_atual == 3){
-						
+							var _mosca = instance_create_layer(_pos_x, _pos_y, "Enemies", obj_mosca_3);
+							_mosca.sala_id = sala_atual;
+							_mosca.inimigo_id = inimigo_count;
+							inimigo_count+=1;							
 						}
 					}
 				#endregion
@@ -259,7 +265,10 @@ function room_mostrar(){
 							_bomb.inimigo_id = inimigo_count;
 							inimigo_count+=1;				
 						} else if (andar_atual == 3){
-						
+							var _bomb = instance_create_layer(_pos_x, _pos_y, "Enemies", obj_bomber_3);
+							_bomb.sala_id = sala_atual;
+							_bomb.inimigo_id = inimigo_count;
+							inimigo_count+=1;								
 						}				
 
 					}			

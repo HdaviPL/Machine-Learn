@@ -10,7 +10,7 @@ function cube2_fly(){
 	hspd = lengthdir_x(spd,direc);
 	vspd = lengthdir_y(spd,direc);
 	var _list = ds_list_create();	
-	var _perto = collision_circle_list(x,y,8,obj_cube_fly, false, true, _list, false);
+	var _perto = collision_circle_list(x,y,8,obj_cube_fly_2, false, true, _list, false);
 	var _repul_x = 0;
 	var _repul_y = 0;	
 	if (_perto) > 0{

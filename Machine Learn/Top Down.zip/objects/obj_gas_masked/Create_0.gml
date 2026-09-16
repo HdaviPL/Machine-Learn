@@ -1,6 +1,6 @@
 event_inherited();
 
-hp = 8;
+hp = 9;
 prox = 200;
 spd = 1.8;
 
