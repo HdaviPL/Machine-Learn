@@ -114,5 +114,3 @@ if (is_array(lista)){
 } else{
 	item = lista;
 }
-
-show_debug_message(object_get_name(item));

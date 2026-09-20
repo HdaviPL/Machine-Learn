@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"obj_right_arm",
-    "path":"folders/Objetos/obj_person/obj_right_arm.yy",
+    "path":"folders/Objetos/obj_person/obj_bosses/obj_right_arm.yy",
   },
   "parentObjectId":{
     "name":"obj_enemy",

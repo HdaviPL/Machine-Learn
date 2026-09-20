@@ -83,7 +83,7 @@ function room_mostrar(){
 			
 				//desenhar um buraco na posição e se a cor for preto
 				if (_r == 0) and (_g == 0) and (_b == 0) and (_a == 255){
-					var _hole = instance_create_layer(_pos_x,_pos_y,"Holes",obj_hole);;	
+					var _hole = instance_create_layer(_pos_x,_pos_y,"Holes",obj_hole);
 					_hole.borda = true;
 					if _y > 0{
 						var _pixel_cima = buffer_peek(buffer_room, 4 * (_x + (_y - 1) * _w),buffer_u32);

@@ -84,6 +84,7 @@ if (have_ring == true){
 	if (!instance_exists(obj_ring_light)){
 		var _anel = instance_create_layer(x, y, "Shadows", obj_ring_light);
 		_anel.image_alpha = 0.5;
+		_anel.depth = 100;
 		_anel.alvo = self;
 		_anel.corection_v = 4;
 	}
