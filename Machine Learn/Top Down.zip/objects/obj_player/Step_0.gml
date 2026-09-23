@@ -52,6 +52,12 @@ if (_inimigo or place_meeting(x,y,obj_spike)) and (inv_timer <= 0) and (state !=
 	}
 #endregion
 
+#region testes (apagar depois)
+if (keyboard_check_pressed(ord("K"))){
+	y = room_height - 244;
+}
+#endregion
+
 #region item effects
 //botas sujas
 if (have_dirty == true) and (hspd != 0 or vspd != 0){
@@ -89,6 +95,7 @@ if (have_ring == true){
 player_inputs();
 
 script_execute(state);
+
 
 #region rolar
 if (roll) and (roll_timer_start <= 0){
