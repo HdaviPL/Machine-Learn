@@ -3,7 +3,7 @@ event_inherited();
 hp = 9;
 
 direc = 0;
-spd = 3.4;
+spd = 3.2;
 timer_to_walk = 0;
 timer_to_walk_max = 10;
 

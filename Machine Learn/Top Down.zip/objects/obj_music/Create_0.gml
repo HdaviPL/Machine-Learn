@@ -32,6 +32,12 @@ music.silence ={
 	"3": sd_music_silence
 }
 
+music.menu ={
+	"1": sd_music_menu,	
+	"2": sd_music_menu,	
+	"3": sd_music_menu
+}
+
 andar_atual = 1;
 music_prox = noone;
 music_atual = noone;

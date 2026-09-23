@@ -8,15 +8,17 @@ if (enter){
 
 			room_goto(room_destino);
 			if (room_destino == rm_start){
-				var _x = room_width/2;
-				var _y = room_height/2 + 100;
-				obj_player.x = _x;
-				obj_player.y = _y;
-				with (obj_retry){
-					if (obj_player.state != player_dead){
-						exit;	
+				if (instance_exists(obj_player)){
+					var _x = room_width/2;
+					var _y = room_height/2 + 100;
+					obj_player.x = _x;
+					obj_player.y = _y;
+					with (obj_retry){
+						if (obj_player.state != player_dead){
+							exit;	
+						}
+						instance_destroy();
 					}
-					instance_destroy();
 				}
 			}
 			exit;

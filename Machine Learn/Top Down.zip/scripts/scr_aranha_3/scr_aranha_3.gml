@@ -29,6 +29,7 @@ function aranha_shot3(){
 		var _shoot_y = y + lengthdir_y(obj_aranha_canon.dist_mao, _ang);
 		var _shoot = instance_create_layer(_shoot_x, _shoot_y, "Enemies", obj_shoot_masked);
 		_shoot.angle = point_direction(x,y,obj_player.x,obj_player.y);
+		_shoot.spd = 3;
 		timer_to_walk = timer_to_walk_max;
 		state = aranha_idle3;
 	}

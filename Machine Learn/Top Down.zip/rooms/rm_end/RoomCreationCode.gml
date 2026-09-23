@@ -1,0 +1,1 @@
+obj_music.tipo_music = "loja";

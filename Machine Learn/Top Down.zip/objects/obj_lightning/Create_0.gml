@@ -5,3 +5,4 @@ if (_xscale != 0){
 	image_xscale = _xscale;
 }
 timer_end = 12;
+audio_play_sound(sd_light,1,false);	

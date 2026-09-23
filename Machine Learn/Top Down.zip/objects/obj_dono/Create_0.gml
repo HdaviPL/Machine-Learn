@@ -51,5 +51,6 @@ timer_shoot = 0;
 timer_shoot_max = 15;
 
 state = dono_throne;
+can_damage = false;
 
-var _trono = instance_create_layer(x, y, "Wall", obj_trono_fixed);
+instance_create_layer(x, y, "Wall", obj_trono_fixed);

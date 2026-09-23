@@ -46,7 +46,7 @@ function gas_masked_shot(){
 	
 	var _shoot = instance_create_layer(_shoot_x,_shoot_y,"Player",obj_shoot_masked);
 	_shoot.angle = point_direction(x,y,obj_player.x,obj_player.y);
-	_shoot.spd = 5;
+	_shoot.spd = 3.5;
 
 
 	if shot_timer <= 0{

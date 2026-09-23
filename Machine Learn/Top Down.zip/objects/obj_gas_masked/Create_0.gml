@@ -2,7 +2,7 @@ event_inherited();
 
 hp = 9;
 prox = 200;
-spd = 1.8;
+spd = 1.5;
 
 alvo_x = noone;
 alvo_y = noone;

@@ -8,8 +8,8 @@
   "name":"obj_trono",
   "overriddenProperties":[],
   "parent":{
-    "name":"obj_dono",
-    "path":"folders/Objetos/obj_person/obj_bosses/obj_dono.yy",
+    "name":"fase_1",
+    "path":"folders/Objetos/obj_person/obj_bosses/obj_dono/fase_1.yy",
   },
   "parentObjectId":null,
   "persistent":false,

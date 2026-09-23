@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"spr_dono",
-    "path":"folders/Sprites/spr_person/spr_bosses/spr_dono.yy",
+    "name":"fase_1",
+    "path":"folders/Sprites/spr_person/spr_bosses/spr_dono/fase_1.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

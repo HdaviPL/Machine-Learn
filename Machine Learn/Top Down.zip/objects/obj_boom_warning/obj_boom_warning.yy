@@ -3,14 +3,13 @@
   "%Name":"obj_boom_warning",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_boom_warning",
   "overriddenProperties":[],
   "parent":{
-    "name":"obj_dono",
-    "path":"folders/Objetos/obj_person/obj_bosses/obj_dono.yy",
+    "name":"fase_1",
+    "path":"folders/Objetos/obj_person/obj_bosses/obj_dono/fase_1.yy",
   },
   "parentObjectId":null,
   "persistent":false,

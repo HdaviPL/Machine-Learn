@@ -1,7 +1,7 @@
 event_inherited();
 
-hp = 7;
-spd = 1.8;
+hp = 6;
+spd = 1.55;
 
 var _shadow = instance_create_layer(x,y,"Shadows",obj_shadow);
 if  _shadow != noone{

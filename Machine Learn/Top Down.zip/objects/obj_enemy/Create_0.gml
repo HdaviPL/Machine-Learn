@@ -21,3 +21,5 @@ sala_id = -1;
 inimigo_id = -1;
 
 boss = false;
+
+can_damage = true;

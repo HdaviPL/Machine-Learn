@@ -14,7 +14,7 @@ timer_to_fly = 0;
 timer_to_fly_max = 120;
 
 timer_to_idle = 0;
-timer_to_idle_max = 180;
+timer_to_idle_max = 200;
 
 timer_shot = 0;
 timer_shot_max = 60;

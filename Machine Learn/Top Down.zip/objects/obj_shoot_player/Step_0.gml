@@ -12,19 +12,21 @@ if place_meeting(x,y,obj_wall){
 }
 var _enemy = instance_place(x,y,obj_enemy);
 if (_enemy != noone){
-	if _enemy.i_frame <= 0{
-		_enemy.hp -= dano;
-		_enemy.i_frame = _enemy.i_frame_max;
-		_enemy.hit_timer = _enemy.hit_timer_max;
-		obj_camera.scn_shake = 2;
-		audio_play_sound(sd_hitting,1,false);
-		var _dano_count = instance_create_layer(x, y, "Items",obj_damage);
-		_dano_count.timer = _dano_count.timer_max;
-		_dano_count._y = y;
-		_dano_count.depth = -500;
-		var _spot = instance_create_layer( x, y, "Shadows", obj_bullet_spot);
-		if (obj_player.item_alvo.is_ranged == true) and (obj_player.item_alvo.can_pef == false){
-			instance_destroy();
+    if (_enemy.can_damage == true){
+		if _enemy.i_frame <= 0{
+			_enemy.hp -= dano;
+			_enemy.i_frame = _enemy.i_frame_max;
+			_enemy.hit_timer = _enemy.hit_timer_max;
+			obj_camera.scn_shake = 2;
+			audio_play_sound(sd_hitting,1,false);
+			var _dano_count = instance_create_layer(x, y, "Items",obj_damage);
+			_dano_count.timer = _dano_count.timer_max;
+			_dano_count._y = y;
+			_dano_count.depth = -500;
+			var _spot = instance_create_layer( x, y, "Shadows", obj_bullet_spot);
+			if (obj_player.item_alvo.is_ranged == true) and (obj_player.item_alvo.can_pef == false){
+				instance_destroy();
+			}
 		}
 	}
 }

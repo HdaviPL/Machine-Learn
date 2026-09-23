@@ -2,15 +2,17 @@ if (timer_dirty > 0){
 	timer_dirty--;	
 	var _enemy = instance_place(x,y,obj_enemy);
 	if (_enemy != noone){
-		if (_enemy.i_frame <= 0){
-			_enemy.i_frame = _enemy.i_frame_max;
-			_enemy.hp -= dano;
-			obj_camera.scn_shake = 2;
-			var _dano_count = instance_create_layer(x, y, "Items",obj_damage);
-			_dano_count.timer = _dano_count.timer_max;
-			_dano_count._y = y;
-			_dano_count.exib = dano;
-			_dano_count.depth = -500;
+		if (_enemy.can_damage == true){
+			if (_enemy.i_frame <= 0){
+				_enemy.i_frame = _enemy.i_frame_max;
+				_enemy.hp -= dano;
+				obj_camera.scn_shake = 2;
+				var _dano_count = instance_create_layer(x, y, "Items",obj_damage);
+				_dano_count.timer = _dano_count.timer_max;
+				_dano_count._y = y;
+				_dano_count.exib = dano;
+				_dano_count.depth = -500;
+			}
 		}
 	}
 	

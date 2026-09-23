@@ -1,3 +1,10 @@
+if (global.pause == true){
+	image_speed = 0;
+	exit;	
+} else{
+	image_speed = 1;
+}
+
 if (!instance_exists(obj_dono)){
 	instance_destroy();	
 	exit;

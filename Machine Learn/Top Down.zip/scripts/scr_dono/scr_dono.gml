@@ -80,7 +80,7 @@ function dono_wave(){
 				var _throne = instance_create_layer(x, y, "Enemies", obj_trono);
 				_throne.depth = 20;
 			}
-		
+			can_damage = true;		
 			state = dono_follow;
 		}
 	#endregion
@@ -165,6 +165,7 @@ function dono_random(){
 //laser
 	function dono_laser(){
 		sprite_index = spr_dono_laser;
+		audio_play_sound(sd_laser,1,false);	
 		if (!instance_exists(obj_laser)){
 			var _laser = instance_create_layer(x, y, "Enemies", obj_laser);
 			_laser.alvo = self;
@@ -183,6 +184,7 @@ function dono_random(){
 		if (timer_shoot > 0){
 			timer_shoot--;	
 		} else{
+			audio_play_sound(sd_shot,1,false);	
 			var _shoot = instance_create_layer(x, y + 20, "Enemies", obj_shoot_masked);
 			_shoot.angle = point_direction(x, y, obj_player.x, obj_player.y);
 			_shoot.depth = 200;
@@ -196,6 +198,7 @@ function dono_random(){
 		if (timer_boom > 0){
 			timer_boom--;
 		} else{
+			audio_play_sound(sd_exp,1,false);	
 			for (var i = 0; i < boom_max; ++i) {
 				var _boom = instance_create_layer(x, y, "Shadows", obj_boom);
 			}
@@ -220,5 +223,8 @@ function dono_random(){
 function dono_death(){
 	instance_create_layer(x,y,"Shadows",obj_death_boss);
 	audio_play_sound(sd_enemy_death,1,false);	
+	var _x = room_width/2;
+	var _y = room_height/2 - 72;
+	instance_create_layer(_x, _y, "Enemies", obj_dono_2);
 	instance_destroy();
 }

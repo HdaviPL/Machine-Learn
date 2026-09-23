@@ -1,4 +1,4 @@
- if (tipo_music == "silence"){
+if (tipo_music == "silence"){
 	grupo_music = music.silence;	
 } else if (tipo_music == "boss"){
 	grupo_music = music.boss;		
@@ -8,6 +8,8 @@
 	grupo_music = music.loja_boss;	
 } else if (tipo_music == "andar"){
 	grupo_music = music.andar;	
+} else if (tipo_music == "menu"){
+	grupo_music = music.menu;	
 } 
 
 if instance_exists(obj_room){

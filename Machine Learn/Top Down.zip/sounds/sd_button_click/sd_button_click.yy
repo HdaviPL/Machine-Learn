@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sd_button_click",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":1,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.61689585,
+  "exportDir":"",
+  "name":"sd_button_click",
+  "parent":{
+    "name":"Sound_Effects",
+    "path":"folders/Sounds/Sound_Effects.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":48000,
+  "soundFile":"sd_button_click.wav",
+  "volume":1.0,
+}

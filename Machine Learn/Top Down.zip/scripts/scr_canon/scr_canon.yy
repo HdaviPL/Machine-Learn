@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_canon",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_canon",
+  "parent":{
+    "name":"scr_gerais",
+    "path":"folders/Scripts/scr_gerais.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

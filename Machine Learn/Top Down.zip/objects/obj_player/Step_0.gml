@@ -30,10 +30,11 @@ if kb_timer > 0{
 if timer_dirty > 0{
 	timer_dirty--;	
 }
-	
-var _inimigo = place_meeting(x,y,obj_enemy) or place_meeting(x,y,obj_projectiles) or (place_meeting(x,y,obj_lojista) and obj_lojista.state != loj_shop) or place_meeting(x,y,obj_exp) or place_meeting(x,y,obj_exp_player);
 
-if (_inimigo or place_meeting(x,y,obj_spike))  and (inv_timer <= 0) and (state != player_roll) and (state != player_dead) and (!instance_exists(obj_transition)){
+//tudo que da dano:	
+var _inimigo = place_meeting(x,y,obj_enemy) or place_meeting(x,y,obj_projectiles) or (place_meeting(x,y,obj_lojista) and obj_lojista.state != loj_shop) or place_meeting(x,y,obj_exp) or place_meeting(x,y,obj_exp_player) or (place_meeting(x,y,obj_boom)) or (place_meeting(x,y,obj_laser))  or (place_meeting(x,y,obj_lightning))  or (place_meeting(x,y,obj_laser_2));
+
+if (_inimigo or place_meeting(x,y,obj_spike)) and (inv_timer <= 0) and (state != player_roll) and (state != player_dead) and (!instance_exists(obj_transition)){
 	audio_play_sound(sd_hurt, 1, false);
 	player_damage(1);
 }
@@ -49,12 +50,6 @@ if (_inimigo or place_meeting(x,y,obj_spike))  and (inv_timer <= 0) and (state !
 		bomb -= 1;
 		instance_create_layer(x, y, "Items", obj_bomb);	
 	}
-#endregion
-
-#region testes (apagar depois)
-if (keyboard_check_pressed(ord("K"))){
-	y = room_height - 244;
-}
 #endregion
 
 #region item effects
@@ -94,7 +89,6 @@ if (have_ring == true){
 player_inputs();
 
 script_execute(state);
-
 
 #region rolar
 if (roll) and (roll_timer_start <= 0){

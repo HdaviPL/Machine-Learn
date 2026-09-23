@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_menu",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_menu",
+  "parent":{
+    "name":"scr_gerais",
+    "path":"folders/Scripts/scr_gerais.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
