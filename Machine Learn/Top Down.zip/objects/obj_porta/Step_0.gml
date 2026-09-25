@@ -1,6 +1,6 @@
 switch (room){ //decide pra qual sala vai e SE vai pra uma sala
 	case rm_start:
-		obj_music.tipo_music = "silence";
+		obj_music.tipo_music = "menu";
 		troca_room = true;
 		room_destino = rm_game_01;
 		porta_block = false;
@@ -53,7 +53,7 @@ switch (room){ //decide pra qual sala vai e SE vai pra uma sala
 	case rm_loja_02:
 		troca_room = true;
 		room_destino = rm_boss_02;
-		if (instance_exists(obj_lojista) and (obj_lojista.count_shots <= 0)){
+		if (instance_exists(obj_lojista) and (obj_lojista.count_shots <= 0)) or (obj_lojista.state != loj_shop){
 			obj_music.tipo_music = "loja boss";
 			if (direc == "up"){
 				porta_block = true;

@@ -3,7 +3,7 @@ function main_menu(){
 		audio_play_sound(sd_button_click, 0, false);
 		var _transition = instance_create_layer(0, 0, "Instances_room", obj_transition);
 		_transition.troca_room = true;
-		_transition.room_destino = rm_start;
+		_transition.room_destino = rm_lore_01;
 	}
 	if mouse_check_button_released(mb_left) and position_meeting(mouse_x, mouse_y, obj_config){
 		audio_play_sound(sd_button_click, 0, false);

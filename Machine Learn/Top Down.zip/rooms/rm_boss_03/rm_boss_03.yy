@@ -8,14 +8,14 @@
   "instanceCreationOrder":[
     {"name":"inst_308848CD2_1_1","path":"rooms/rm_boss_03/rm_boss_03.yy",},
     {"name":"inst_3BB1A07D1_1_1","path":"rooms/rm_boss_03/rm_boss_03.yy",},
-    {"name":"inst_1BBB1638","path":"rooms/rm_boss_03/rm_boss_03.yy",},
-    {"name":"inst_3C7138CA","path":"rooms/rm_boss_03/rm_boss_03.yy",},
-    {"name":"inst_6A4EB7F9","path":"rooms/rm_boss_03/rm_boss_03.yy",},
-    {"name":"inst_60472FE","path":"rooms/rm_boss_03/rm_boss_03.yy",},
     {"name":"inst_4A75697C","path":"rooms/rm_boss_03/rm_boss_03.yy",},
     {"name":"inst_4C03E1E6","path":"rooms/rm_boss_03/rm_boss_03.yy",},
     {"name":"inst_108CDCB3","path":"rooms/rm_boss_03/rm_boss_03.yy",},
     {"name":"inst_A1D89EA","path":"rooms/rm_boss_03/rm_boss_03.yy",},
+    {"name":"inst_16478DEA","path":"rooms/rm_boss_03/rm_boss_03.yy",},
+    {"name":"inst_30442BB8","path":"rooms/rm_boss_03/rm_boss_03.yy",},
+    {"name":"inst_1A2DF57E","path":"rooms/rm_boss_03/rm_boss_03.yy",},
+    {"name":"inst_7297D45","path":"rooms/rm_boss_03/rm_boss_03.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -45,10 +45,10 @@
         ],"TileDataFormat":1,},"tilesetId":{"name":"Tile_wall_3","path":"tilesets/Tile_wall_3/Tile_wall_3.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"Obs","depth":600,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Obs","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Wall","depth":700,"effectEnabled":true,"effectType":null,"gridX":16,"gridY":16,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v4","%Name":"inst_1BBB1638","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1BBB1638","objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":18.0,"x":0.0,"y":0.0,},
-        {"$GMRInstance":"v4","%Name":"inst_3C7138CA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3C7138CA","objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":24.0,"scaleY":2.0,"x":0.0,"y":288.0,},
-        {"$GMRInstance":"v4","%Name":"inst_6A4EB7F9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6A4EB7F9","objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":22.0,"scaleY":4.0,"x":16.0,"y":0.0,},
-        {"$GMRInstance":"v4","%Name":"inst_60472FE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_60472FE","objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":18.0,"x":368.0,"y":0.0,},
+        {"$GMRInstance":"v4","%Name":"inst_16478DEA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_16478DEA","objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":15.0,"scaleY":45.0,"x":-224.0,"y":-208.0,},
+        {"$GMRInstance":"v4","%Name":"inst_30442BB8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_30442BB8","objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":24.0,"scaleY":14.0,"x":0.0,"y":288.0,},
+        {"$GMRInstance":"v4","%Name":"inst_1A2DF57E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1A2DF57E","objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":22.0,"scaleY":17.010174,"x":16.0,"y":-208.0,},
+        {"$GMRInstance":"v4","%Name":"inst_7297D45","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7297D45","objectId":{"name":"obj_wall","path":"objects/obj_wall/obj_wall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":17.0,"scaleY":45.0,"x":368.0,"y":-208.0,},
       ],"layers":[],"name":"Wall","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRAssetLayer":"","%Name":"Holes_Sprites","assets":[
         {"$GMRSpriteGraphic":"v1","%Name":"graphic_1E97C9FE","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_1E97C9FE","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_hole_out_down","path":"sprites/spr_hole_out_down/spr_hole_out_down.yy",},"x":16.0,"y":112.0,},

@@ -34,10 +34,10 @@ if (instance_exists(obj_player)){
 }
 
 
-if (keyboard_check_pressed(ord("O"))){
-	with(obj_enemy){
-		if (can_damage == true){
-			hp -= 200000;		
-		}
-	}
-}
+//if (keyboard_check_pressed(ord("O"))){
+//	with(obj_enemy){
+//		if (can_damage == true){
+//			hp -= 200000;		
+//		}
+//	}
+//}

@@ -37,6 +37,11 @@ music.menu ={
 	"2": sd_music_menu,	
 	"3": sd_music_menu
 }
+music.credits ={
+	"1": sd_music_credits,	
+	"2": sd_music_credits,	
+	"3": sd_music_credits
+}
 
 andar_atual = 1;
 music_prox = noone;

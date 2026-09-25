@@ -104,13 +104,17 @@
 		
 		//desenhar tempo
 		draw_text_transformed(dist_room_temp, alt_room_temp, string(obj_game.mint) + "M:" + string(obj_game.sec) + "S:" + string(obj_game.msec) + "MS" , scale-1.5, scale-1.5, 0);
-
 		if (!instance_exists(obj_room)){
 			draw_text_transformed(dist_room_sal, alt_room_sal, sala, scale_numb, scale_numb, 0);
 		} else{
 			andar = obj_room.andar_atual;
 			//desenhar a sala atual
 			sala = string(obj_room.sala_atual + 1);
+			if (string(sala >= 10)){
+				dist_room_sal = 1696;
+			} else{
+				dist_room_sal = 1736;	
+			}
 			draw_text_transformed(dist_room_sal, alt_room_sal, sala, scale_numb, scale_numb, 0);
 		}
 	#endregion

@@ -10,6 +10,8 @@ if (tipo_music == "silence"){
 	grupo_music = music.andar;	
 } else if (tipo_music == "menu"){
 	grupo_music = music.menu;	
+} else if (tipo_music == "credits"){
+	grupo_music = music.credits;	
 } 
 
 if instance_exists(obj_room){

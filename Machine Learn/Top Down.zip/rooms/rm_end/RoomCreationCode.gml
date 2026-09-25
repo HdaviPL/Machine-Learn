@@ -1,1 +1,1 @@
-obj_music.tipo_music = "loja";
+obj_music.tipo_music = "credits";

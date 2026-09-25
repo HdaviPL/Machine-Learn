@@ -52,11 +52,11 @@ if (_inimigo or place_meeting(x,y,obj_spike)) and (inv_timer <= 0) and (state !=
 	}
 #endregion
 
-#region testes (apagar depois)
-if (keyboard_check_pressed(ord("K"))){
-	y = room_height - 244;
-}
-#endregion
+//#region testes (apagar depois)
+//if (keyboard_check_pressed(ord("K"))){
+//	y = room_height - 244;
+//}
+//#endregion
 
 #region item effects
 //botas sujas

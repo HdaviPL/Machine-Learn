@@ -1,8 +1,8 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_porta_closed",
-  "bboxMode":1,
-  "bbox_bottom":31,
+  "bboxMode":2,
+  "bbox_bottom":37,
   "bbox_left":0,
   "bbox_right":31,
   "bbox_top":0,
